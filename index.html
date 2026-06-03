@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <title>QUIZ_IT</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="screen-active" id="start-screen">
+            <h1>QUIZ TIME</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ipsa repellendus minus quaerat velit perferendis laborum magnam veniam sint iste.</p>
+            <button id="start-btn">Start Now</button>
+        </div>
+        <div class="screen" id="quiz-screen">
+            <h2 id="question-text">Question for the quiz</h2>
+            <div class="quiz-info">
+                <p>
+                    Question <span id="current-question">1</span> of <span id="question-length">5</span>
+                </p>
+                <p>Score: <span id="score">0</span> </p>
+            </div>
+            <div id="answer-container" class="answer-container">
+                <!--Answer Buttons-->
+
+            </div>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+        <div class="screen" id="result-screen">
+            <h1>Quiz Results</h1>
+            <div class="result-info">
+                <p>You scored <span id="final-score">0</span> out of <span id="max-score">5</span></p>
+                <div class="result-message">
+                    Final message
+                </div>
+                <button id="restart-btn">Restart Quiz</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
