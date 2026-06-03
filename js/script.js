@@ -111,6 +111,7 @@
         correct: 0
     }];
     const startScreen = document.getElementById('start-screen');
+    const levelScreen = document.getElementById('level-screen');
     const quizScreen = document.getElementById('quiz-screen');
     const resultScreen = document.getElementById('result-screen');
 
@@ -133,7 +134,7 @@
     const totalQuestions = quizData.length;
 
     function showScreen(screen) {
-        [startScreen, quizScreen, resultScreen].forEach(s => s.classList.remove('screen-active'));
+        [startScreen,levelScreen, quizScreen, resultScreen].forEach(s => s.classList.remove('screen-active'));
         screen.classList.add('screen-active');
     }
 
