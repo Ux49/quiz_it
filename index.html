@@ -4,48 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=IBM+Plex+Mono:wght@400;600;700&display=swap"
         rel="stylesheet">
     <title>QUIZ_IT</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="screen-active" id="start-screen">
-            <h1>QUIZ TIME</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ipsa repellendus minus quaerat velit perferendis laborum magnam veniam sint iste.</p>
-            <button id="start-btn">Start Now</button>
-        </div>
-        <div class="screen" id="quiz-screen">
-            <h2 id="question-text">Question for the quiz</h2>
-            <div class="quiz-info">
-                <p>
-                    Question <span id="current-question">1</span> of <span id="question-length">5</span>
-                </p>
-                <p>Score: <span id="score">0</span> </p>
-            </div>
-            <div id="answer-container" class="answer-container">
-                <!--Answer Buttons-->
 
+    <div class="container">
+
+        <!-- HEADER BAR -->
+        <div class="nb-header-bar">
+            QUIZ_IT 
+        </div>
+
+        <!-- START SCREEN -->
+        <div class="screen screen-active" id="start-screen">
+            <div class="start-inner">
+                <div class="logo-block">
+                    <span class="logo-bracket">[</span>
+                    <h1 class="logo-text">QUIZ_IT</h1>
+                    <span class="logo-bracket">]</span>
+                </div>
+                <p class="start-desc">
+                    Test your knowledge across a series of carefully crafted questions.
+                    Answer fast, think sharp, and aim for a perfect score.
+                </p>
+                <button id="start-btn" class="btn btn-primary">
+                    START NOW <span class="btn-arrow">▶</span>
+                </button>
             </div>
+        </div>
+
+        <!-- QUIZ SCREEN -->
+        <div class="screen" id="quiz-screen">
+            <div class="quiz-header">
+                <div class="quiz-meta">
+                    <span class="meta-tag">Q <span id="current-question">1</span> / <span id="question-length">5</span></span>
+                    <span class="meta-score">SCORE <span id="score">0</span></span>
+                </div>
+                <h2 id="question-text">Question for the quiz</h2>
+            </div>
+
+            <div id="answer-container" class="answer-container">
+                <!-- Answer Buttons injected by JS -->
+            </div>
+
             <div class="progress-bar">
                 <div class="progress" id="progress"></div>
             </div>
         </div>
+
+        <!-- RESULT SCREEN -->
         <div class="screen" id="result-screen">
-            <h1>Quiz Results</h1>
-            <div class="result-info">
-                <p>You scored <span id="final-score">0</span> out of <span id="max-score">5</span></p>
-                <div class="result-message">
+            <div class="result-inner">
+                <div class="result-tag">// RESULTS</div>
+                <h1 class="result-title">QUIZ COMPLETE</h1>
+                <div class="score-display">
+                    <span class="score-num" id="final-score">0</span>
+                    <span class="score-sep">/</span>
+                    <span class="score-max" id="max-score">5</span>
+                </div>
+                <div class="result-message" id="result-message">
                     Final message
                 </div>
-                <button id="restart-btn">Restart Quiz</button>
+                <button id="restart-btn" class="btn btn-secondary">
+                    RESTART <span class="btn-arrow">↺</span>
+                </button>
             </div>
         </div>
+
     </div>
 </body>
 
