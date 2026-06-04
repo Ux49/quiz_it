@@ -1,115 +1,127 @@
 (function () {
     const quizData = [{
-        question: 'What is Linux?',
-        answers: [
-            'An operating system',
-            'A web browser',
-            'A programming language',
-            'A database'
+        1: [{
+            question: 'What is Linux?',
+            answers: [
+                'An operating system',
+                'A web browser',
+                'A programming language',
+                'A database'
+            ],
+            correct: 0
+        }, {
+            question: 'Which command is used to list files and directories?',
+            answers: ['ls', 'cd', 'pwd', 'mkdir'],
+            correct: 0
+        }, {
+            question: 'What does the pwd command do?',
+            answers: [
+                'Prints the current directory path',
+                'Lists files',
+                'Deletes files',
+                'Creates a directory'
+            ],
+            correct: 0
+        }, {
+            question: 'Which command is used to change directories?',
+            answers: ['mv', 'cp', 'cd', 'ls'],
+            correct: 2
+        }, {
+            question: 'Which command creates a new directory?',
+            answers: ['touch', 'mkdir', 'rmdir', 'cat'],
+            correct: 1
+        }, {
+            question: 'Which command creates an empty file?',
+            answers: ['touch', 'nano', 'mkdir', 'echo'],
+            correct: 0
+        }, {
+            question: 'Which command removes an empty directory?',
+            answers: ['rm', 'rmdir', 'del', 'erase'],
+            correct: 1
+        }, {
+            question: 'Which command is commonly used to display file contents?',
+            answers: ['cat', 'pwd', 'grep', 'chmod'],
+            correct: 0
+        }, {
+            question: 'What does the cp command do?',
+            answers: [
+                'Copies files or directories',
+                'Moves files',
+                'Deletes files',
+                'Changes permissions'
+            ],
+            correct: 0
+        }, {
+            question: 'What does the mv command do?',
+            answers: [
+                'Views files',
+                'Moves or renames files',
+                'Creates files',
+                'Copies files'
+            ],
+            correct: 1
+        }, {
+            question: 'Which command removes files?',
+            answers: ['rm', 'cp', 'mv', 'touch'],
+            correct: 0
+        }, {
+            question: 'What does chmod do?',
+            answers: [
+                'Changes file permissions',
+                'Creates directories',
+                'Lists files',
+                'Displays memory usage'
+            ],
+            correct: 0
+        }, {
+            question: 'Which symbol represents the home directory?',
+            answers: ['#', '~', '@', '$'],
+            correct: 1
+        }, {
+            question: 'Which command displays the current logged-in user?',
+            answers: ['whoami', 'user', 'login', 'me'],
+            correct: 0
+        }, {
+            question: 'Which command shows the current date and time?',
+            answers: ['clock', 'date', 'time', 'now'],
+            correct: 1
+        }, {
+            question: 'What is the root directory represented by?',
+            answers: ['~', '/root', '/', 'C:\\'],
+            correct: 2
+        }, {
+            question: 'Which command is used to search for text inside files?',
+            answers: ['grep', 'find', 'locate', 'search'],
+            correct: 0
+        }, {
+            question: 'Which command clears the terminal screen?',
+            answers: ['clean', 'reset', 'cls', 'clear'],
+            correct: 3
+        }, {
+            question: 'What is a Linux distribution?',
+            answers: [
+                'A version of Linux bundled with software',
+                'A programming language',
+                'A file system',
+                'A terminal command'
+            ],
+            correct: 0
+        }, {
+            question: 'Which of these is a popular Linux distribution?',
+            answers: ['Ubuntu', 'Windows', 'macOS', 'Chrome'],
+            correct: 0
+        }
         ],
-        correct: 0
-    }, {
-        question: 'Which command is used to list files and directories?',
-        answers: ['ls', 'cd', 'pwd', 'mkdir'],
-        correct: 0
-    }, {
-        question: 'What does the pwd command do?',
-        answers: [
-            'Prints the current directory path',
-            'Lists files',
-            'Deletes files',
-            'Creates a directory'
-        ],
-        correct: 0
-    }, {
-        question: 'Which command is used to change directories?',
-        answers: ['mv', 'cp', 'cd', 'ls'],
-        correct: 2
-    }, {
-        question: 'Which command creates a new directory?',
-        answers: ['touch', 'mkdir', 'rmdir', 'cat'],
-        correct: 1
-    }, {
-        question: 'Which command creates an empty file?',
-        answers: ['touch', 'nano', 'mkdir', 'echo'],
-        correct: 0
-    }, {
-        question: 'Which command removes an empty directory?',
-        answers: ['rm', 'rmdir', 'del', 'erase'],
-        correct: 1
-    }, {
-        question: 'Which command is commonly used to display file contents?',
-        answers: ['cat', 'pwd', 'grep', 'chmod'],
-        correct: 0
-    }, {
-        question: 'What does the cp command do?',
-        answers: [
-            'Copies files or directories',
-            'Moves files',
-            'Deletes files',
-            'Changes permissions'
-        ],
-        correct: 0
-    }, {
-        question: 'What does the mv command do?',
-        answers: [
-            'Views files',
-            'Moves or renames files',
-            'Creates files',
-            'Copies files'
-        ],
-        correct: 1
-    }, {
-        question: 'Which command removes files?',
-        answers: ['rm', 'cp', 'mv', 'touch'],
-        correct: 0
-    }, {
-        question: 'What does chmod do?',
-        answers: [
-            'Changes file permissions',
-            'Creates directories',
-            'Lists files',
-            'Displays memory usage'
-        ],
-        correct: 0
-    }, {
-        question: 'Which symbol represents the home directory?',
-        answers: ['#', '~', '@', '$'],
-        correct: 1
-    }, {
-        question: 'Which command displays the current logged-in user?',
-        answers: ['whoami', 'user', 'login', 'me'],
-        correct: 0
-    }, {
-        question: 'Which command shows the current date and time?',
-        answers: ['clock', 'date', 'time', 'now'],
-        correct: 1
-    }, {
-        question: 'What is the root directory represented by?',
-        answers: ['~', '/root', '/', 'C:\\'],
-        correct: 2
-    }, {
-        question: 'Which command is used to search for text inside files?',
-        answers: ['grep', 'find', 'locate', 'search'],
-        correct: 0
-    }, {
-        question: 'Which command clears the terminal screen?',
-        answers: ['clean', 'reset', 'cls', 'clear'],
-        correct: 3
-    }, {
-        question: 'What is a Linux distribution?',
-        answers: [
-            'A version of Linux bundled with software',
-            'A programming language',
-            'A file system',
-            'A terminal command'
-        ],
-        correct: 0
-    }, {
-        question: 'Which of these is a popular Linux distribution?',
-        answers: ['Ubuntu', 'Windows', 'macOS', 'Chrome'],
-        correct: 0
-    }];
+
+    },
+    {
+        2: [{
+            question: 'Testing?',
+            answers: ['1', '2', '3', '4'],
+            correct: 1
+        }],
+    }
+    ];
     const startScreen = document.getElementById('start-screen');
     const levelScreen = document.getElementById('level-screen');
     const quizScreen = document.getElementById('quiz-screen');
@@ -128,21 +140,42 @@
     const maxScoreSpan = document.getElementById('max-score');
     const resultMessage = document.getElementById('result-message');
 
+    function renderLevelGrid() {
+        const levelGrid = document.querySelector('.level-grid');
+        const totalLevels = Object.keys(quizData).length;
+
+        levelGrid.innerHTML = ''; // clear existing buttons
+
+
+        for (let i = 1; i <= totalLevels; i++) {
+            const btn = document.createElement('button');
+            btn.className = 'level-card';
+            btn.id = `level-${i}`;
+            btn.textContent = i;
+
+            btn.addEventListener('click', () => startQuiz(i));
+
+            levelGrid.appendChild(btn);
+        }
+    }
+
     let currentIndex = 0;
     let score = 0;
     let answered = false;
     const totalQuestions = quizData.length;
 
+
+    // ARRAY FOR THE DIFFERENT SCREENS
     function showScreen(screen) {
-        [startScreen,levelScreen, quizScreen, resultScreen].forEach(s => s.classList.remove('screen-active'));
+        [startScreen, levelScreen, quizScreen, resultScreen].forEach(s => s.classList.remove('screen-active'));
         screen.classList.add('screen-active');
     }
-
+    // FOR THE PROGRESS BAR FOR THE VISUAL REPRESENTATION OF THE QUIZ
     function updateProgress() {
         const percent = ((currentIndex) / totalQuestions) * 100;
         progressBar.style.width = percent + '%';
     }
-
+    // HANDLES WHOLE QUESTION SELECTION FROM THE quizData
     function loadQuestion() {
         answered = false;
         answerContainer.classList.remove('locked');
@@ -172,7 +205,7 @@
             answerContainer.appendChild(btn);
         });
     }
-
+    // CHECKS THE CORRECTNESS OF THE ANSWER AND INDICATES THE WRONG AND CORRECT ANSWER BOTH
     function handleAnswer(chosenIndex, clickedBtn) {
         if (answered) return;
         answered = true;
@@ -207,6 +240,7 @@
             }
         }, 900);
     }
+    //FINAL RESULT SCREEN AND DISPLAYS A CUSTOM MESSAGE
     function showResults() {
         updateProgress();
         progressBar.style.width = '100%';
@@ -239,6 +273,10 @@
         showScreen(resultScreen);
     }
 
+    document.addEventListener('DOMContentLoaded', () => {
+        renderLevelGrid();
+    });
+    // AFTER LEVEL SELECTION MODIFY THIS SECTION THIS SHOULD DYNAMICALLY ALLOCATE EACH LEVEL BASED ON THE QUIZ DATA 
     function startQuiz() {
         currentIndex = 0;
         score = 0;
@@ -252,7 +290,11 @@
         startQuiz();
     }
 
-    startBtn.addEventListener('click', startQuiz);
+    function levelscr() {
+        showScreen(levelScreen);
+    }
+
+    startBtn.addEventListener('click', levelscr);
     restartBtn.addEventListener('click', restartQuiz);
 
 

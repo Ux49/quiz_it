@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        :root {
+            --yellow: #ffe033;
+            --yellow-dim: #e6c800;
+            --green: #b8ff4f;
+            --red: #ff4545;
+            --black: #000;
+            --white: #fff;
+            --gray-light: #f5f5f5;
+            --gray-mid: #e0e0e0;
+            --text-primary: #000;
+            --text-secondary: #333;
+            --text-muted: #666;
+            --text-subtle: #999;
+
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-mono: 'IBM Plex Mono', monospace;
+
+            --border-size: 3px;
+            --shadow-size: 5px;
+            --shadow-color: var(--black);
+        }
+
+        *,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f0f0f0;
+            background-image:
+                linear-gradient(#e5e5e5 1px, transparent 1px),
+                linear-gradient(90deg, #e5e5e5 1px, transparent 1px);
+            background-size: 28px 28px;
+            color: var(--text-primary);
+            font-family: var(--font-mono);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1.5rem;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Level Screen */
+        #level-screen {
+            text-align: center;
+        }
+
+        .level-header {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 1.8rem;
+            letter-spacing: -0.02em;
+            border-left: 6px solid var(--yellow);
+            padding-left: 0.75rem;
+            text-align: left;
+        }
+
+        .level-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .level-card {
+            background: var(--white);
+            border: 3px solid var(--black);
+            box-shadow: 4px 4px 0 var(--black);
+            font-family: var(--font-display);
+            width: 4rem;
+            font-size: 2rem;
+            font-weight: 900;
+            padding: 1rem 0;
+            cursor: pointer;
+            transition: transform 0.08s ease, box-shadow 0.08s ease;
+            color: var(--black);
+            text-align: center;
+        }
+
+        .level-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0 var(--black);
+            background: var(--yellow);
+        }
+
+        .level-card:active {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0 var(--black);
+        }
+
+        @media (max-width: 480px) {
+            .level-grid {
+                gap: 0.7rem;
+            }
+
+            .level-card {
+                font-size: 1.5rem;
+                padding: 0.7rem 0;
+            }
+
+            .level-header {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+    <!-- Levels Screen -->
+    <div class="screen" id="level-screen">
+        <h2 class="level-header">Select Level</h2>
+
+        <div class="level-grid">
+            <button class="level-card" id="level-1">1</button>
+            <button class="level-card" id="level-2">2</button>
+            <button class="level-card" id="level-3">3</button>
+            <button class="level-card" id="level-4">4</button>
+
+            <button class="level-card" id="level-5">5</button>
+            <button class="level-card" id="level-6">6</button>
+            <button class="level-card" id="level-7">7</button>
+            <button class="level-card" id="level-8">8</button>
+
+            <button class="level-card" id="level-9">9</button>
+            <button class="level-card" id="level-10">10</button>
+            <button class="level-card" id="level-11">11</button>
+            <button class="level-card" id="level-12">12</button>
+        </div>
+    </div>
+</body>
+
+</html>

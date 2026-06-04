@@ -78,7 +78,7 @@
             letter-spacing: 0.1em;
         }
 
-        /* ─── SCREENS ────────────────────────────────── */
+        /* SCREENS  */
         .screen {
             display: none;
             padding: 2rem 1.75rem;
@@ -101,7 +101,7 @@
             }
         }
 
-        /* ─── START SCREEN ───────────────────────────── */
+        /* START SCREEN  */
         #start-screen {
             min-height: 380px;
             display: none;
@@ -163,7 +163,7 @@
             box-shadow: 2px 2px 0 var(--black);
         }
 
-        /* ─── BUTTONS ────────────────────────────────── */
+        /* BUTTONS  */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -227,10 +227,70 @@
             line-height: 1;
         }
 
-        /* --- Level Screen ---*/
-        
+        /* Level Screen */
+        #level-screen {
+            text-align: center;
+        }
 
-        /* ─── QUIZ SCREEN ────────────────────────────── */
+        .level-header {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 1.8rem;
+            letter-spacing: -0.02em;
+            border-left: 6px solid var(--yellow);
+            padding-left: 0.75rem;
+            text-align: left;
+        }
+
+        .level-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .level-card {
+            background: var(--white);
+            border: 3px solid var(--black);
+            box-shadow: 4px 4px 0 var(--black);
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 900;
+            padding: 1rem 0;
+            cursor: pointer;
+            transition: transform 0.08s ease, box-shadow 0.08s ease;
+            color: var(--black);
+            text-align: center;
+        }
+
+        .level-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0 var(--black);
+            background: var(--yellow);
+        }
+
+        .level-card:active {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0 var(--black);
+        }
+
+        @media (max-width: 480px) {
+            .level-grid {
+                gap: 0.7rem;
+            }
+
+            .level-card {
+                font-size: 1.5rem;
+                padding: 0.7rem 0;
+            }
+
+            .level-header {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* QUIZ SCREEN  */
         #quiz-screen {
             display: none;
             flex-direction: column;
@@ -307,7 +367,7 @@
             border-bottom: 3px solid var(--black);
         }
 
-        /* ─── ANSWER BUTTONS ─────────────────────────── */
+        /*  ANSWER BUTTONS */
         .answer-container {
             display: flex;
             flex-direction: column;
@@ -413,7 +473,7 @@
             opacity: 1;
         }
 
-        /* ─── PROGRESS BAR ───────────────────────────── */
+        /* PROGRESS BAR  */
         .progress-bar {
             height: 12px;
             background: var(--white);
@@ -436,7 +496,7 @@
             border-right: 2px solid var(--black);
         }
 
-        /* ─── RESULT SCREEN ──────────────────────────── */
+        /* RESULT SCREEN= */
         #result-screen {
             min-height: 380px;
             display: none;
@@ -525,7 +585,7 @@
             box-shadow: 2px 2px 0 var(--black);
         }
 
-        /* ─── RESPONSIVE ─────────────────────────────── */
+        /* RESPONSIVE  */
         @media (max-width: 480px) {
             body {
                 padding: 0.75rem;
