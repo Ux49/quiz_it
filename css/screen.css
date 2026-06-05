@@ -1,0 +1,21 @@
+.screen {
+    display: none;
+    padding: 2rem 1.75rem;
+    animation: popIn 0.25s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+.screen-active {
+    display: block;
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

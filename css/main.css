@@ -1,0 +1,79 @@
+        :root {
+            --yellow: #ffe033;
+            --yellow-dim: #e6c800;
+            --green: #b8ff4f;
+            --red: #ff4545;
+            --black: #000;
+            --white: #fff;
+            --gray-light: #f5f5f5;
+            --gray-mid: #e0e0e0;
+            --text-primary: #000;
+            --text-secondary: #333;
+            --text-muted: #666;
+            --text-subtle: #999;
+
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-mono: 'IBM Plex Mono', monospace;
+
+            --border-size: 3px;
+            --shadow-size: 5px;
+            --shadow-color: var(--black);
+        }
+
+        *,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f0f0f0;
+            background-image:
+                linear-gradient(#e5e5e5 1px, transparent 1px),
+                linear-gradient(90deg, #e5e5e5 1px, transparent 1px);
+            background-size: 28px 28px;
+            color: var(--text-primary);
+            font-family: var(--font-mono);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1.5rem;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 560px;
+            background: var(--white);
+            border: var(--border-size) solid var(--black);
+            box-shadow: var(--shadow-size) var(--shadow-size) 0 var(--black);
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        .nb-header-bar {
+            background: var(--black);
+            color: var(--yellow);
+            font-family: var(--font-mono);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 0.45rem 1.5rem;
+            border-bottom: var(--border-size) solid var(--black);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .nb-header-bar span {
+            color: #888;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+        }

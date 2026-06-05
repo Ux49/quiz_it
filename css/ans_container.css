@@ -1,0 +1,104 @@
+.answer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    flex: 1;
+}
+
+.answer-btn {
+    background: var(--white);
+    color: var(--black);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-align: left;
+    padding: 0.7rem 0.85rem;
+    border: 2.5px solid var(--black);
+    box-shadow: 3px 3px 0 var(--black);
+    cursor: pointer;
+    transition: transform 0.07s ease, box-shadow 0.07s ease, background 0.1s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.answer-btn:focus-visible {
+    outline: 3px solid var(--yellow);
+    outline-offset: 2px;
+}
+
+/* Index badge */
+.answer-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.5rem;
+    height: 1.5rem;
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    transition: background 0.1s ease, color 0.1s ease;
+    letter-spacing: 0;
+}
+
+.answer-btn:hover {
+    background: #fafafa;
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 var(--black);
+}
+
+.answer-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 var(--black);
+}
+
+/* Correct state */
+.answer-btn.correct {
+    background: var(--green) !important;
+    border-color: var(--black);
+    box-shadow: 3px 3px 0 var(--black);
+    color: var(--black);
+    transform: translate(-1px, -1px);
+    cursor: default;
+    pointer-events: none;
+}
+
+.answer-btn.correct .answer-badge {
+    background: var(--black);
+    color: var(--green);
+}
+
+/* Wrong state */
+.answer-btn.wrong {
+    background: var(--red) !important;
+    border-color: var(--black);
+    box-shadow: 3px 3px 0 var(--black);
+    color: var(--white);
+    cursor: default;
+    pointer-events: none;
+}
+
+.answer-btn.wrong .answer-badge {
+    background: var(--white);
+    color: var(--red);
+}
+
+.answer-btn:disabled {
+    pointer-events: none;
+}
+
+/* Keep non-selected buttons visible but not clickable after choice */
+.answer-container.locked .answer-btn {
+    pointer-events: none;
+    opacity: 0.55;
+}
+
+.answer-container.locked .answer-btn.correct,
+.answer-container.locked .answer-btn.wrong {
+    opacity: 1;
+}

@@ -1,0 +1,61 @@
+#level-screen {
+    text-align: center;
+}
+
+.level-header {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 1.8rem;
+    letter-spacing: -0.02em;
+    border-left: 6px solid var(--yellow);
+    padding-left: 0.75rem;
+    text-align: left;
+}
+
+.level-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.level-card {
+    background: var(--white);
+    border: 3px solid var(--black);
+    box-shadow: 4px 4px 0 var(--black);
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 900;
+    padding: 1rem 0;
+    cursor: pointer;
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+    color: var(--black);
+    text-align: center;
+}
+
+.level-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--black);
+    background: var(--yellow);
+}
+
+.level-card:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--black);
+}
+
+@media (max-width: 480px) {
+    .level-grid {
+        gap: 0.7rem;
+    }
+
+    .level-card {
+        font-size: 1.5rem;
+        padding: 0.7rem 0;
+    }
+
+    .level-header {
+        font-size: 1.5rem;
+    }
+}
