@@ -1,4 +1,4 @@
-# UX49 - Personal Portfolio
+# UX49 - QUIZ IT (QUIZ GAME)
 
 ## Design Language
 
